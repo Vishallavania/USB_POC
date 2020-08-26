@@ -1,0 +1,220 @@
+﻿#firstcol1 {
+    background-color: darkred;
+    color: white;
+}
+#list th {
+    background-color: darkred;
+    font: 12px bold white;
+    color: white;
+    border: 1px solid black;
+}
+#text th {
+    border: 1px solid black;
+}
+#firstcol {
+    background-color: #000080;
+    color: white;
+}
+#wrapper {
+   
+    overflow: hidden;
+    transition: height 200ms;
+    height: 0; 
+}
+.fa-plus-circle {
+    font-size: 150px;
+    color: red;
+}
+
+.fa-minus-circle {
+    font-size: 150px;
+    color: green;
+}
+
+.row3 {
+    margin: 20px;
+    text-align: center;
+}
+.row4 {
+    margin:25px 0px 0px 50px;
+    text-align:center;
+}
+table td {
+    border: 1px solid black;
+    height: 5px;
+    text-align:center;
+}
+table th {
+    background-color: #000080;
+    font: 12px bold white;
+    color: white;
+    border: 1px solid black;
+}
+table thead {
+    background-color: #000080;
+    font: 12px bold white;
+    color: white;
+    border: 1px solid black;
+}
+#row2 {
+    margin-left: 10px;
+}
+.button {
+    border-radius: 4px;
+    border: none;
+    background-color:transparent;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 14px;
+  
+    width: auto;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+    .inputnumber {
+        width: 70px;
+        height: 25px;
+    }
+.inputaccnumber {
+    width: 110px;
+    height: 25px;
+}
+.inputdropdown {
+    width: 110px;
+    height: 28px;
+}
+.inputtin {
+    width: 90px;
+    height: 25px;
+}
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+    .button:hover {
+        padding-right: 25px;
+        background-color: blue;
+    }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+.thirdnav {
+    margin:10px;
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+}
+    .thirdnav input{
+        border:1px solid blue;
+    }
+    #btnlink {
+        background: transparent;
+        font: 12px/17px Bold;
+        opacity: 1;
+        color: white;
+    }
+.container{
+    margin:0px;
+    padding-left:15px;
+}
+#title{
+    color:white;
+    font:18px bold ;
+}
+#sm {
+    margin:10px;
+    font: 12px bold white;
+}
+#menu nav-item nav-link {
+    color: white;
+    float: right;
+}
+#nav1 {
+    background-color: #000080;
+}
+#link{float:right;
+      color:white;
+}
+
+.topnav {
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+    overflow: hidden;
+    background-color: #000080;
+}
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+        .topnav a.active {
+            background-color: #2196F3;
+            color: white;
+        }
+
+    .topnav .login-container {
+        float: right;
+    }
+
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+        width: 120px;
+    }
+    .topnav .login-container img {
+        border-radius: 50%;
+        height:40px;
+        width:40px;
+    }
+    .topnav .login-container span{
+        color:white;
+        margin-right:20px;
+    }
+    .topnav .login-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background-color: #555;
+        color: white;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .topnav .login-container button:hover {
+            background-color: green;
+        }
+
+@media screen and (max-width: 600px) {
+    .topnav .login-container {
+        float: none;
+    }
+
+     
+}
+.navbar2 {
+    background-color: dodgerblue;
+    color: white;
+    padding: 0px;
+    box-shadow: 0px 8px 8px -6px rgba(0,0,0,.5);
+}

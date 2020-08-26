@@ -1,0 +1,468 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+
+    <div class="row">
+        <label><b>The items displayed below are assigned to you for processing.You may view other work queues by selecting a name from the drop down list below.</b></label>
+        <br />
+        <label><b>Work Queue for:  </b></label>
+        &nbsp;&nbsp;
+        <select class="form-control" id="workqueue" for="workqueue" name="workqueue" style="width:165px; height:35px" required>
+            <option value="User" selected>Vishal</option>
+            <option value="">Rasmita </option>
+            <option value="">Rajesh </option>
+            <option value="">Mohammed </option>
+            <option value="">Saroj </option>
+        </select>
+    </div>
+    <br />
+    <div class="row">
+        <div>
+            <label><b>Displaying 5 items  </b></label>
+            &nbsp;&nbsp;
+            <input type="checkbox" id="myCheck" onclick="myFunction()">
+
+            <label for="myCheck">(Show pending researchs)</label>
+            <input type="button" class="btn btn-primary" data-toggle="modal" data-target="#AddNewCTR" value="Add New CTR Log" />
+            &nbsp;&nbsp;
+            <input type="button" class="btn btn-info" value="Referesh Queue" />
+        </div>
+    </div>
+
+
+</div>
+
+<!--GRID-->
+<div class="row3">
+    <table class="table" id="text" style="display:none">
+        <thead>
+            <tr>
+                <th>NBR</th>
+                <th>Action</th>
+                <th>View Issues</th>
+                <th>CTR Log ID</th>
+                <th>Id Number</th>
+                <th>Bussiness Name</th>
+                <th>TN</th>
+                <th>Tran Date</th>
+                <th>Input Date</th>
+                <th>Account Number</th>
+                <th>Ammount</th>
+                <th>Tran Type</th>
+                <th>Tran NBR</th>
+                <th>Branch Nbr</th>
+                <th>Tdr NBR</th>
+                <th>Bussiness Line</th>
+                <th>Research Revd</th>
+                <th>EXEM</th>
+                <th>MCL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="firstcol">1</td>
+                <td>Anna</td>
+                <td><i id="button1" onclick="Function(this)" class="fa fa-plus-circle"></i></td>
+
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+
+            <tr>
+                <td id="firstcol">1</td>
+                <td>Anna</td>
+                <td><i id="button2" onclick="Function(this)" class="fa fa-plus-circle"></i></td>
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+            <tr>
+                <td id="firstcol">1</td>
+                <td>Anna</td>
+                <td><i id="button3" onclick="Function(this)" class="fa fa-plus-circle"></i></td>
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="row4" id="wrapper" >
+    <table class="table" id="list">
+        <thead>
+            <tr>
+                <th>NBR</th>
+                <th>Action</th>
+                
+                <th>CTR Log ID</th>
+                <th>Id Number</th>
+                <th>Bussiness Name</th>
+                <th>TN</th>
+                <th>Tran Date</th>
+                <th>Input Date</th>
+                <th>Account Number</th>
+                <th>Ammount</th>
+                <th>Tran Type</th>
+                <th>Tran NBR</th>
+                <th>Branch Nbr</th>
+                
+                <th>Bussiness Line</th>
+                <th>Research Revd</th>
+                <th>EXEM</th>
+                <th>MCL</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+            <tr>
+                <td id="firstcol1">1</td>
+                <td>Anna</td>
+                
+                <td>35</td>
+                <td>New York</td>
+                <td>USA</td>
+                <td>Female</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Yes</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<!--ADD CTR Modal -->
+<div class="modal fade" id="AddNewCTR" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div style="margin:10px">
+            <div class="modal-content" style="width:600px">
+                <div class="modal-header">
+                    <div class="text-center">
+                        <h5 class="modal-title">Add New CTR</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div style="padding:10px">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label><b>CTR Nbr*</b></label>
+
+                                <input type="text" class="inputnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtCTRNbr"
+                                       name="txtctrnbr" required>
+
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" size="15" value="">MICL?
+                                </label>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" size="15" value="">Exemption?
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label><b>Comfirm CTR Nbr*</b></label>
+
+                                <input type="text" class="inputnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtComfirmCTRNbr"
+                                       name="txtctrnbr" required>
+
+                                <label>(Confirm CTR Nbr for verification)</label>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label><b>Bus/Ind Name</b></label>
+
+                                <input type="text" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr" style="height: 25px; width:345px">
+
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label><b>Account Number</b></label>
+
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+                            </div>
+                            <div class="col-md-5">
+                                <label><b>TIN</b></label>
+                                <input type="text" class="inputtin" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label><b>Tran Date*</b></label>
+
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtTranDate"
+                                       name="txtctrnbr">
+                            </div>
+                            <div class="col-md-5">
+                                <label><b>Account</b></label>
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label><b>Tran Type</b></label>
+
+                                <select class="inputdropdown" id="workqueue" for="workqueue" name="workqueue">
+                                    <option value="" selected>None</option>
+                                    <option value="">Banking </option>
+                                    <option value="">Finance </option>
+                                    <option value="">ENU </option>
+                                    <option value="">Cloud </option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label><b>Tran Nbr</b></label>
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label><b>Bussiness Line*</b></label>
+
+                                <select class="inputdropdown" id="txtBusinessline" for="workqueue" name="workqueue" required>
+                                    <option value="" selected>Retail</option>
+                                    <option value="">Banking </option>
+                                    <option value="">Finance </option>
+                                    <option value="">ENU </option>
+                                    <option value="">Cloud </option>
+                                </select>
+                            </div>
+                            <div class="col-md-5">
+                                <label><b>Branch Nbr</b></label>
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label><b>Teller Nbr</b></label>
+
+                                <input type="text" class="inputaccnumber" aria-label="Small" aria-describedby="inputGroup-sizing-sm" id="txtctrnbr"
+                                       name="txtctrnbr">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" onclick="AddCTR()" id="AddCTR" data-toggle="modal">Add CTR</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Exit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ADD Issue Modal -->
+<div class="modal fade" id="AddNewIssues" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div style="margin:10px">
+            <div class="modal-content" style="width:500px">
+                <div class="modal-header">
+                    <div class="text-center">
+                        <h5 class="modal-title">Add New Issue</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div style="padding:10px">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label><b>CTR Log</b></label>
+
+                                <span id="txtCTRLogNbr" style="color:darkred; font-weight:700; font-size:large"></span>
+                            </div>
+
+                            <div class="col-md-7">
+                                <label><b>Customer Type</b></label>
+
+                                <select class="inputdropdown" id="txtCustomerType" for="workqueue" name="workqueue" required>
+                                    <option value="">Retail</option>
+                                    <option value="">Banking </option>
+                                    <option value="">Finance </option>
+                                    <option value="">ENU </option>
+                                    <option value="">Cloud </option>
+                                </select>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label><b>Issue</b></label>
+
+                                <select class="inputdropdown" id="txtIssue" for="workqueue" name="workqueue" required>
+                                    <option value="">Retail</option>
+                                    <option value="">Banking </option>
+                                    <option value="">Finance </option>
+                                    <option value="">ENU </option>
+                                    <option value="">Cloud </option>
+                                </select>
+                            </div>
+                            <div class="col-md-7">
+
+                                <label><b>Issue Type</b></label>
+
+                                <select class="inputdropdown" id="txtIssueType" for="workqueue" name="workqueue" required>
+                                    <option value="">Retail</option>
+                                    <option value="">Banking </option>
+                                    <option value="">Finance </option>
+                                    <option value="">ENU </option>
+                                    <option value="">Cloud </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label><b>Issue Comment</b></label>
+
+                                <textarea class="form-control" rows="3" placeholder="Provide Comment on the issue"></textarea>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="text-center">
+                            <button type="button" class="btn btn-success" onclick="AddIssue()" id="AddIssue">Add Issue</button>
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Exit</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    function AddCTR() {
+        var txtCTRNbr = $('#txtCTRNbr').val();
+        var txtComfirmCTRNbr = $('#txtComfirmCTRNbr').val();
+
+        var txtTranDate = $("#txtTranDate").val();
+        var txtBusinessline = $("#txtBusinessline").val();
+
+        $.ajax({
+           url: '@Url.Action("AddCTR", "Home")',
+                type: "POST",
+                data: { 'txtCTRNbr': txtCTRNbr, 'txtComfirmCTRNbr': txtComfirmCTRNbr, 'txtTranDate': txtTranDate, 'txtBusinessline': txtBusinessline},
+                dataType: "json",
+                success: function (response)
+                {
+                    $('#AddNewCTR').modal('hide');
+                    alert("CTR Log "+txtCTRNbr+" Added Successfully")
+                    $('#AddNewIssues').modal('show');
+                    $('#txtCTRLogNbr').text(txtCTRNbr)
+                },
+                error: function (response)
+                {
+                    alert("error");
+                }
+        });
+    }
+</script>
+<script>
+
+    function AddIssue() {
+
+        var txtCTRLogNbr = $('#txtCTRLogNbr').text();
+        var txtCustomerType = $('#txtCustomerType').val();
+
+        var txtIssue = $("#txtIssue").val();
+        var txtIssueType = $("#txtIssueType").val();
+
+        $.ajax({
+                url: '@Url.Action("AddIssue", "Home")',
+                type: "POST",
+                data: { 'txtCTRLogNbr': txtCTRLogNbr, 'txtCustomerType': txtCustomerType, 'txtIssue': txtIssue, 'txtIssueType': txtIssueType},
+                dataType: "json",
+                success: function (response)
+                {
+                    alert("Issue has been Added Successfully")
+                    $('#AddNewIssues').modal('show');
+                    $('#txtCTRLogNbr').text(txtCTRLogNbr);
+                    $('#txtCustomerType').val(1);
+                    $('#txtIssue').val(1);
+                    $('#txtIssueType').val(1);
+
+                },
+                error: function (response)
+                {
+                    alert("error");
+                }
+        });
+    }
+</script>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - USbank</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="~/js/site.js" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="topnav">
+
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" id="title">Currency Communication Log  <small id="sm">     Processor Queue</small></a>
+
+            <div class="login-container">
+                <form action="/action_page.php">
+                    <img src="~/images/men2.png"/>
+                    <span>Mohammed</span>
+
+                    @*<input type="text" placeholder="Username" name="username">
+                    <input type="text" placeholder="Password" name="psw">*@
+                    @*<button type="submit">Login</button>*@
+                </form>
+            </div>
+
+        </div>
+        <nav class="navbar2" role="navigation" >
+            <div class="row" id="row2">
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Processor Log</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Active CTR Log</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Achived CTR Log</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Unassigned Issues</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Assigned Issues</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Bulk Upload</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> User Maintenance</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Issue Type Maintenance</span>
+
+                </button>
+                <button onclick='window.location = "@Url.Action("Dashboard", "Developer")";' class="button">
+
+                    <span> Bussiness Live Maintenance</span>
+
+                </button>
+            </div>
+        </nav>
+        <div class="thirdnav" >
+            <div class="text-center">
+                <label>CTR Log Id :</label>
+                <input type="text" placeholder="Log Id" name="username">
+                <label>Id Number :</label>
+                <input type="text" placeholder="Id Nbr" name="username">
+                <label>TIN :</label>
+                <input type="text" placeholder="TIN" name="username">
+                <label>Account Number :</label>
+                <input type="text" placeholder="Acc Nbr" name="username">
+              
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2020 - USbank - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
